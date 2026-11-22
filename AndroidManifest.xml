@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.linklauncher.phone" android:versionCode="5" android:versionName="2.1">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <application android:label="링크 열기" android:icon="@drawable/app_icon"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <provider android:name=".GeneratedApkProvider" android:authorities="app.linklauncher.phone.generated"
+            android:exported="false" android:grantUriPermissions="true" />
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
